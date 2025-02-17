@@ -6,20 +6,13 @@ const ProductRouter = require('./Routes/ProductRouter');
 const route = require('./Routes/mainroute');
 const app = express();
 
-// app.use(cors(
-//     {
-//         origin: 'https://auth-mern-1-ui.vercel.app', // Your frontend URL
-//         methods: ['GET', 'POST'],   // Allowed methods
-//         credentials: true,
-//     },
-//     {
-//         origin: 'http://localhost:3000', // Your frontend URL
-//         methods: ['GET', 'POST'],   // Allowed methods
-//         credentials: true,
-//     }
-// ));
-
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'https://go-cab-vm9g-frontend.vercel.app', 
+        methods: ['GET', 'POST'],   // Allowed methods
+        credentials: true,
+    }
+));
 
 app.use(express.json())
 
