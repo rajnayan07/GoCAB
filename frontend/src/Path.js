@@ -128,7 +128,7 @@ const Path = ({ graph, src, dest, car, email}) => {
       time:call?.distance,
       price:call?.distance*car
     }
-    axios.post('http://localhost:8080/', data)
+    axios.post('https://go-cab-livid.vercel.app/', data)
     .then(resp=>{
       if(resp){
         setShowModal(true);
